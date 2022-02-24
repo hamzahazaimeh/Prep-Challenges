@@ -63,9 +63,12 @@ const objectCounter = (obj) => {
 // ------------------------
 
 const stringReverse = (str) => {
-   
-  
-
+   let splitedstring = str.split(" ");
+   let callback = (prev, current) => {
+     return current + " " + prev
+   }
+    let result =splitedstring.reduce(callback)
+    return result
 }
 // -------------------------------------------------------------------------------------------------------
 
