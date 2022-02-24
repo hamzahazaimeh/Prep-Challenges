@@ -41,7 +41,17 @@ const LastWord = (str) => {
 //  Output: "potter"
 
 const LastWord_2 = (str) => {
-    // write your code here
+    let returnV = "";
+    let result = str.lastIndexOf(" ");
+    if (result) {
+        let arr = str.split("");
+        for (let i = result + 1; i < arr.length; i++)
+            returnV += arr[i];
+    }
+    else {
+        returnV = str;
+    }
+return returnV;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -64,7 +74,19 @@ const LastWord_2 = (str) => {
 //
 
 const replaceWords = (str) => {
-    // write your code here
+    let arr=str.split(" ")
+    if(arr.indexOf("I")!=-1)
+    {
+    arr.splice(arr.indexOf("I"), 1, 'We');
+    }
+    if (arr.indexOf("am")!=-1){
+        arr.splice(arr.indexOf("am"), 1, 'are');
+    }
+    if(arr.indexOf("was")!=-1){
+        arr.splice(arr.indexOf("was"), 1, 'were');
+    }
+    
+    return arr.join(" ");
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -79,7 +101,12 @@ const replaceWords = (str) => {
 //
 
 const arrToStr = (arr) => {
-    // write your code here
+    for(let i=0;i<arr.length;i++)
+    {
+        if(i==4)
+        arr[i]+=",";
+    }
+return arr.join(" ");
 }
 // -------------------------------------------------------------------------------------------------------
 
